@@ -2,12 +2,13 @@ import React from 'react';
 import './ContactMe.css';
 import { FaEnvelope, FaLinkedin, FaGithub, FaGlobe, FaRocket } from 'react-icons/fa';
 import { contactData } from '../data';
+import headshot from '../images/headshot.jpg';
 
 const ContactMe: React.FC = () => {
   return (
     <div className="contact-container">
       <div className="linkedin-badge-custom">
-        <img src={contactData.profilePicture.url} alt={contactData.name} className="badge-avatar" />
+        <img src={headshot} alt={contactData.name} className="badge-avatar" />
         <div className="badge-content">
           <h3 className="badge-name">{contactData.name}</h3>
           <p className="badge-title">{contactData.title}</p>

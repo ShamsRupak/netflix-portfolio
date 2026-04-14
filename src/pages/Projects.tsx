@@ -1,6 +1,6 @@
 import React from 'react';
 import './Projects.css';
-import { FaPython, FaReact, FaDocker, FaRust, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaPython, FaReact, FaDocker, FaRust, FaExternalLinkAlt, FaBrain, FaSearch } from 'react-icons/fa';
 import { SiCplusplus, SiPrometheus, SiPostgresql, SiRedis, SiFastapi, SiPytorch, SiScikitlearn } from 'react-icons/si';
 import { MdCable } from 'react-icons/md';
 import { projectsData } from '../data';
@@ -14,9 +14,12 @@ const techIcons: { [key: string]: JSX.Element } = {
   "Compilers": <SiCplusplus />,
   "Bytecode": <SiCplusplus />,
   "GC": <SiCplusplus />,
+  "Concurrency": <SiCplusplus />,
+  "Threads": <SiCplusplus />,
   "Python": <FaPython />,
   "FastAPI": <SiFastapi />,
   "PyTorch": <SiPytorch />,
+  "Transformers": <SiPytorch />,
   "LoRA": <SiPytorch />,
   "LLMs": <SiPytorch />,
   "React": <FaReact />,
@@ -28,6 +31,11 @@ const techIcons: { [key: string]: JSX.Element } = {
   "XGBoost": <SiScikitlearn />,
   "Pandas": <FaPython />,
   "Scikit-learn": <SiScikitlearn />,
+  "LlamaIndex": <FaBrain />,
+  "RAG": <FaBrain />,
+  "OCR": <FaSearch />,
+  "DAG Planner": <FaBrain />,
+  "ReAct": <FaBrain />,
 };
 
 const Projects: React.FC = () => {
