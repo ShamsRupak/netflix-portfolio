@@ -25,7 +25,7 @@
 
 .nav-logo-text {
   font-family: 'Bebas Neue', Impact, sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   background: linear-gradient(180deg, #e50914 0%, #b81d24 100%);
   -webkit-background-clip: text;
@@ -35,10 +35,11 @@
   margin-right: 30px;
   margin-left: 10px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .sidebar-logo-text {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-right: 0;
 }
 

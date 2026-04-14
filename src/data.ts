@@ -153,29 +153,45 @@ export const projectsData: Project[] = [
 
 export const skillsData: Skill[] = [
   // Languages
-  { name: 'Python', category: 'Languages', description: 'Primary language for ML/AI and backend', icon: 'FaPython' },
-  { name: 'C++', category: 'Languages', description: 'Systems programming, compilers, OOP', icon: 'SiCplusplus' },
-  { name: 'Rust', category: 'Languages', description: 'Systems-level, memory-safe engineering', icon: 'SiRust' },
-  { name: 'TypeScript', category: 'Languages', description: 'Full-stack web development', icon: 'SiTypescript' },
-  { name: 'SQL', category: 'Languages', description: 'CTEs, window functions, analytics', icon: 'FaDatabase' },
-  // AI/ML
-  { name: 'PyTorch', category: 'AI / Machine Learning', description: 'Deep learning, policy gradients, RL', icon: 'SiPytorch' },
-  { name: 'Scikit-learn', category: 'AI / Machine Learning', description: 'Classical ML, pipelines, evaluation', icon: 'SiScikitlearn' },
-  { name: 'XGBoost', category: 'AI / Machine Learning', description: 'Gradient boosting, tabular data', icon: 'FaBrain' },
-  { name: 'LlamaIndex', category: 'AI / Machine Learning', description: 'RAG pipelines, document AI', icon: 'FaBrain' },
-  { name: 'HuggingFace', category: 'AI / Machine Learning', description: 'Transformers, fine-tuning, LoRA', icon: 'FaBrain' },
-  // Web & Backend
-  { name: 'FastAPI', category: 'Web & Backend', description: 'Production REST APIs, async Python', icon: 'SiPython' },
-  { name: 'React', category: 'Web & Backend', description: 'Frontend interfaces, SPAs', icon: 'FaReact' },
-  { name: 'Node.js', category: 'Web & Backend', description: 'Backend JavaScript runtime', icon: 'FaNodeJs' },
-  { name: 'PostgreSQL', category: 'Web & Backend', description: 'Relational databases, analytics', icon: 'SiPostgresql' },
-  { name: 'Redis', category: 'Web & Backend', description: 'Caching, pub/sub, sessions', icon: 'SiRedis' },
-  // DevOps & Tools
-  { name: 'Docker', category: 'DevOps & Tools', description: 'Containerization, multi-stage builds', icon: 'FaDocker' },
-  { name: 'Git / GitHub', category: 'DevOps & Tools', description: 'Version control, CI/CD, Actions', icon: 'FaGitAlt' },
-  { name: 'Prometheus', category: 'DevOps & Tools', description: 'Metrics, monitoring, alerting', icon: 'SiPrometheus' },
-  { name: 'Linux', category: 'DevOps & Tools', description: 'System administration, scripting', icon: 'FaLinux' },
-  { name: 'CMake', category: 'DevOps & Tools', description: 'C++ build systems, cross-platform', icon: 'SiCmake' },
+  { name: 'C++20', category: 'Languages', description: 'Compilers, systems programming, OOP', icon: 'SiCplusplus' },
+  { name: 'Rust', category: 'Languages', description: 'Event streaming, memory-safe systems', icon: 'SiRust' },
+  { name: 'Python', category: 'Languages', description: 'Backend, ML/AI, data science', icon: 'FaPython' },
+  { name: 'Java', category: 'Languages', description: 'OOP, enterprise applications', icon: 'FaJava' },
+  { name: 'SQL', category: 'Languages', description: 'CTEs, window functions, PostgreSQL', icon: 'FaDatabase' },
+  { name: 'JavaScript', category: 'Languages', description: 'Full-stack web development', icon: 'SiTypescript' },
+  { name: 'C', category: 'Languages', description: 'Low-level systems programming', icon: 'SiCplusplus' },
+  // Systems & Backend
+  { name: 'FastAPI', category: 'Systems & Backend', description: 'Production REST APIs, async Python', icon: 'SiPython' },
+  { name: 'JWT / OAuth2', category: 'Systems & Backend', description: 'Auth & RBAC systems', icon: 'FaDatabase' },
+  { name: 'Redis', category: 'Systems & Backend', description: 'Caching, rate limiting, pub/sub', icon: 'SiRedis' },
+  { name: 'PostgreSQL', category: 'Systems & Backend', description: 'Schema, migrations, analytics', icon: 'SiPostgresql' },
+  { name: 'Docker', category: 'Systems & Backend', description: 'Containerization, Docker Compose', icon: 'FaDocker' },
+  { name: 'Prometheus', category: 'Systems & Backend', description: 'Metrics & monitoring', icon: 'SiPrometheus' },
+  { name: 'WebSockets', category: 'Systems & Backend', description: 'Real-time communication', icon: 'FaDatabase' },
+  { name: 'GitHub Actions', category: 'Systems & Backend', description: 'CI/CD pipelines', icon: 'FaGitAlt' },
+  { name: 'CMake', category: 'Systems & Backend', description: 'C++ build systems', icon: 'SiCmake' },
+  { name: 'Cargo', category: 'Systems & Backend', description: 'Rust build & package manager', icon: 'SiRust' },
+  { name: 'Linux', category: 'Systems & Backend', description: 'Systems, networking, TCP', icon: 'FaLinux' },
+  // AI / ML / Data Science
+  { name: 'PyTorch', category: 'AI / ML / Data Science', description: 'Deep learning, transformers, RL', icon: 'SiPytorch' },
+  { name: 'Transformers', category: 'AI / ML / Data Science', description: 'GPT from scratch, attention', icon: 'SiPytorch' },
+  { name: 'LoRA', category: 'AI / ML / Data Science', description: 'Fine-tuning, Qwen-2.5', icon: 'SiPytorch' },
+  { name: 'LLM Agents', category: 'AI / ML / Data Science', description: 'DAG planning, ReAct loops', icon: 'FaBrain' },
+  { name: 'RAG', category: 'AI / ML / Data Science', description: 'Semantic search, LlamaIndex', icon: 'FaBrain' },
+  { name: 'Scikit-learn', category: 'AI / ML / Data Science', description: 'Classical ML, pipelines', icon: 'SiScikitlearn' },
+  { name: 'XGBoost', category: 'AI / ML / Data Science', description: 'Gradient boosting, tabular data', icon: 'FaBrain' },
+  { name: 'Drift Detection', category: 'AI / ML / Data Science', description: 'PSI/KL divergence monitoring', icon: 'FaBrain' },
+  { name: 'NLP / OCR', category: 'AI / ML / Data Science', description: 'Text processing, document AI', icon: 'FaBrain' },
+  // Testing & Quality
+  { name: '500+ Tests', category: 'Testing & Quality', description: 'Across all projects', icon: 'FaGitAlt' },
+  { name: 'ASAN / UBSAN', category: 'Testing & Quality', description: 'Sanitizer builds for C/C++', icon: 'SiCplusplus' },
+  { name: 'Benchmarking', category: 'Testing & Quality', description: 'p50/p95/p99 latency profiling', icon: 'FaDatabase' },
+  { name: 'GDB / Valgrind', category: 'Testing & Quality', description: 'Debugging & memory analysis', icon: 'FaLinux' },
+  // Web & Tools
+  { name: 'React', category: 'Web & Tools', description: 'Frontend SPAs, components', icon: 'FaReact' },
+  { name: 'Node.js', category: 'Web & Tools', description: 'Backend JavaScript runtime', icon: 'FaNodeJs' },
+  { name: 'NumPy / Pandas', category: 'Web & Tools', description: 'Scientific computing, DataOps', icon: 'FaPython' },
+  { name: 'Chrome Extensions', category: 'Web & Tools', description: 'Browser dev, Student Buddy', icon: 'FaReact' },
 ];
 
 export const certificationsData: Certification[] = [

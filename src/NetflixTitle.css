@@ -13,7 +13,7 @@
 
 .sr-logo-wrapper {
   display: flex;
-  gap: 8px;
+  gap: 18px;
   opacity: 0;
   transform: scale(0.8);
   animation: fadeIn 0.8s forwards ease-in;
@@ -21,7 +21,7 @@
 
 .sr-letter {
   font-family: 'Bebas Neue', Impact, sans-serif;
-  font-size: 12rem;
+  font-size: 7rem;
   font-weight: 700;
   background: linear-gradient(180deg, #e50914 0%, #b81d24 100%);
   -webkit-background-clip: text;
@@ -54,22 +54,25 @@
 }
 
 .animate.sr-logo-wrapper {
-  animation: zoomOut 2.5s forwards ease-in-out;
+  animation: zoomOut 3s forwards ease-in-out;
 }
 
 @keyframes zoomOut {
-  0%, 60% {
+  0%, 70% {
     transform: scale(1);
     opacity: 1;
   }
   100% {
-    transform: scale(4);
+    transform: scale(3);
     opacity: 0;
   }
 }
 
 @media (max-width: 768px) {
   .sr-letter {
-    font-size: 7rem;
+    font-size: 3.5rem;
+  }
+  .sr-logo-wrapper {
+    gap: 10px;
   }
 }

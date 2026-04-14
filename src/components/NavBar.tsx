@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-left">
           <Link to="/" className="navbar-logo">
-            <span className="nav-logo-text">SR</span>
+            <span className="nav-logo-text">SHAMS RUPAK</span>
           </Link>
           <ul className="navbar-links">
             <li><Link to="/browse">Home</Link></li>
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
 
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-logo">
-          <span className="nav-logo-text sidebar-logo-text">SR</span>
+          <span className="nav-logo-text sidebar-logo-text">SHAMS RUPAK</span>
         </div>
         <ul>
           <li><Link to="/browse" onClick={closeSidebar}><FaHome /> Home</Link></li>

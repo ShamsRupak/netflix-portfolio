@@ -1,6 +1,6 @@
 import React from 'react';
 import './Skills.css';
-import { FaPython, FaReact, FaNodeJs, FaDocker, FaGitAlt, FaLinux, FaDatabase, FaRust, FaBrain } from 'react-icons/fa';
+import { FaPython, FaReact, FaNodeJs, FaDocker, FaGitAlt, FaLinux, FaDatabase, FaRust, FaBrain, FaJava } from 'react-icons/fa';
 import { SiCplusplus, SiTypescript, SiPostgresql, SiRedis, SiPrometheus, SiCmake, SiPytorch, SiScikitlearn } from 'react-icons/si';
 import { skillsData } from '../data';
 
@@ -23,6 +23,7 @@ const iconMap: { [key: string]: JSX.Element } = {
   SiPrometheus: <SiPrometheus />,
   FaLinux: <FaLinux />,
   SiCmake: <SiCmake />,
+  FaJava: <FaJava />,
 };
 
 const Skills: React.FC = () => {
