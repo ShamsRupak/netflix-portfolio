@@ -23,7 +23,7 @@
   font-family: 'Bebas Neue', Impact, sans-serif;
   font-size: 7rem;
   font-weight: 700;
-  font-style: italic;
+  
   background: linear-gradient(180deg, #e50914 0%, #b81d24 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,7 +31,7 @@
   text-shadow: none;
   filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.6));
   letter-spacing: 0.05em;
-  transform: skewX(-4deg);
+  
 }
 
 .click-prompt {
