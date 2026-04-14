@@ -1,18 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .netflix-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: #141414;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.netflix-logo {
-  width: 500px;
-  height: auto;
+.sr-logo-wrapper {
+  display: flex;
+  gap: 8px;
   opacity: 0;
   transform: scale(0.8);
-  animation: fadeIn 0.5s forwards ease-in;
+  animation: fadeIn 0.8s forwards ease-in;
+}
+
+.sr-letter {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 12rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, #e50914 0%, #b81d24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.6));
+  letter-spacing: 0.05em;
+}
+
+.click-prompt {
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
 }
 
 @keyframes fadeIn {
@@ -22,17 +53,23 @@
   }
 }
 
-.animate.netflix-logo {
-  animation: zoomOut 3s forwards ease-in-out;
+.animate.sr-logo-wrapper {
+  animation: zoomOut 2.5s forwards ease-in-out;
 }
 
 @keyframes zoomOut {
-  0%, 80% {
-    transform: scale(0.8);
+  0%, 60% {
+    transform: scale(1);
     opacity: 1;
   }
   100% {
-    transform: scale(3);
+    transform: scale(4);
     opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sr-letter {
+    font-size: 7rem;
   }
 }

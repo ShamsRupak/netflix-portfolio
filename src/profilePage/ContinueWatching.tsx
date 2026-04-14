@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ContinueWatching.css';
 
-type ProfileType = 'recruiter' | 'developer' | 'stalker' | 'adventure';
+type ProfileType = 'recruiter' | 'engineer' | 'researcher' | 'explorer';
 
 interface ContinueWatchingProps {
   profile: ProfileType;
@@ -10,29 +10,26 @@ interface ContinueWatchingProps {
 
 const continueWatchingConfig = {
   recruiter: [
-    { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
-  ],
-  developer: [
-    { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
+    { title: "GitHub", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/github" },
+    { title: "Projects", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/projects" },
     { title: "Certifications", imgSrc: "https://picsum.photos/id/1028/300/200", link: "/certifications" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" },
   ],
-  stalker: [
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
-    { title: "Blogs", imgSrc: "https://picsum.photos/id/1027/300/200", link: "/blogs" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
+  engineer: [
+    { title: "Education", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/education" },
+    { title: "Certifications", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/certifications" },
+    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" },
   ],
-  adventure: [
-    { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
+  researcher: [
+    { title: "Experience", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/work-experience" },
+    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" },
+  ],
+  explorer: [
+    { title: "Education", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/education" },
+    { title: "Experience", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/work-experience" },
     { title: "Certifications", imgSrc: "https://picsum.photos/id/1028/300/200", link: "/certifications" },
-    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" }
-  ]
+    { title: "Contact Me", imgSrc: "https://picsum.photos/id/1029/300/200", link: "/contact-me" },
+  ],
 };
 
 const ContinueWatching: React.FC<ContinueWatchingProps> = ({ profile }) => {

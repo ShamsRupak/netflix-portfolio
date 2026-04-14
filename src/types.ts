@@ -1,11 +1,7 @@
-// types.ts
-
 export interface ProfileBanner {
   backgroundImage: { url: string };
   headline: string;
-  resumeLink: {
-    url: string;
-  };
+  resumeLink: { url: string };
   linkedinLink: string;
   profileSummary: string;
 }
@@ -31,6 +27,7 @@ export interface Project {
   description: string;
   techUsed: string;
   image: { url: string };
+  link?: string;
 }
 
 export interface Certification {
@@ -50,9 +47,11 @@ export interface ContactMe {
   linkedinLink: string;
   email: string;
   phoneNumber: string;
+  github?: string;
+  portfolio?: string;
 }
 
-export interface Skill { 
+export interface Skill {
   name: string;
   category: string;
   description: string;

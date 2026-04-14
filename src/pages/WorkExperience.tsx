@@ -1,78 +1,65 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { MdOutlineWork as WorkIcon } from 'react-icons/md';
 import { IoSchool as SchoolIcon } from 'react-icons/io5';
 import { FaStar as StarIcon } from 'react-icons/fa';
 import './WorkExperience.css';
-import { TimelineItem } from '../types';
-import { getTimeline } from '../queries/getTimeline';
-
+import { timelineData } from '../data';
 
 const WorkExperience: React.FC = () => {
-
-  const [timeLineData, setTimeLineData] = useState<TimelineItem[] | null>(null);
-
-  useEffect(() => {
-    async function fetchTimelineItem() {
-      const data = await getTimeline();
-      setTimeLineData(data);
-    }
-    fetchTimelineItem();
-  }, []);
-
-
-  if (!timeLineData) return <div>Loading...</div>;
-  console.log("🚀 ~ timeLineData:", timeLineData)
-
   return (
     <>
       <div className="timeline-container">
-        <h2 className="timeline-title">📅 Work Experience & Education Timeline</h2>
+        <h2 className="timeline-title">📅 Experience & Education Timeline</h2>
       </div>
       <VerticalTimeline>
-        {timeLineData.map((item, index) => (
+        {timelineData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             className={`vertical-timeline-element--${item.timelineType}`}
             contentStyle={
               item.timelineType === "work"
                 ? index === 0
-                  ? { background: 'rgb(33, 150, 243)', color: '#fff' }
+                  ? { background: 'rgb(229, 9, 20)', color: '#fff' }
                   : { background: 'rgb(240, 240, 240)', color: '#fff' }
-                : { background: 'rgb(255, 224, 230)', color: '#fff' } // Lighter red for education
+                : { background: 'rgb(30, 30, 30)', color: '#fff', border: '1px solid #e50914' }
             }
             contentArrowStyle={
               item.timelineType === "work"
-                ? { borderRight: index === 0 ? '7px solid rgb(33, 150, 243)' : '7px solid rgb(240, 240, 240)' }
-                : { borderRight: '7px solid rgb(255, 224, 230)' }
+                ? { borderRight: index === 0 ? '7px solid rgb(229, 9, 20)' : '7px solid rgb(240, 240, 240)' }
+                : { borderRight: '7px solid rgb(30, 30, 30)' }
             }
             date={item.dateRange}
             iconStyle={
               item.timelineType === "work"
-                ? { background: 'rgb(33, 150, 243)', color: '#fff' }
-                : { background: 'rgb(255, 160, 200)', color: '#fff' } // Softer red for education icon
+                ? { background: 'rgb(229, 9, 20)', color: '#fff' }
+                : { background: 'rgb(30, 30, 30)', color: '#e50914' }
             }
             icon={item.timelineType === "work" ? <WorkIcon /> : <SchoolIcon />}
           >
             {item.timelineType === "work" ? (
-              <div style={{ color: 'black' }}>
+              <div style={{ color: index === 0 ? '#fff' : '#000' }}>
                 <h3 className="vertical-timeline-element-title">{item.title}</h3>
                 <h4 className="vertical-timeline-element-subtitle">{item.name}</h4>
-                <p className="vertical-timeline-element-tech">🔧 {item.techStack}</p>
-                <p>{item.summaryPoints}</p>
+                {item.techStack && <p className="vertical-timeline-element-tech">🔧 {item.techStack}</p>}
+                {item.summaryPoints.map((point, i) => (
+                  <p key={i} style={{ fontSize: '0.9rem', lineHeight: '1.4' }}>{point}</p>
+                ))}
               </div>
             ) : (
-              <div style={{ color: 'black' }}>
+              <div style={{ color: '#e6e6e6' }}>
                 <h3 className="vertical-timeline-element-title">{item.name}</h3>
                 <h4 className="vertical-timeline-element-subtitle">{item.title}</h4>
-                <p>{item.summaryPoints}</p>
+                {item.summaryPoints.map((point, i) => (
+                  <p key={i} style={{ fontSize: '0.9rem', lineHeight: '1.4' }}>{point}</p>
+                ))}
               </div>
             )}
           </VerticalTimelineElement>
         ))}
         <VerticalTimelineElement
-          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+          iconStyle={{ background: 'rgb(229, 9, 20)', color: '#fff' }}
           icon={<StarIcon />}
         />
       </VerticalTimeline>

@@ -1,44 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './ProfileBanner.css';
 import PlayButton from '../components/PlayButton';
 import MoreInfoButton from '../components/MoreInfoButton';
-import { getProfileBanner } from '../queries/getProfileBanner';
-import { ProfileBanner as ProfileBannerType } from '../types';
+import { profileBannerData } from '../data';
 
 const ProfileBanner: React.FC = () => {
-
-
-  const [bannerData, setBannerData] = useState<ProfileBannerType | null>(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      const data = await getProfileBanner();
-      setBannerData(data);
-    }
-    fetchData();
-  }, []);
-
-  if (!bannerData) return <div>Loading...</div>;
+  const bannerData = profileBannerData;
 
   const handlePlayClick = () => {
     window.open(bannerData.resumeLink.url, '_blank');
   };
 
-  const handleLinkedinClick = () => { 
+  const handleLinkedinClick = () => {
     window.open(bannerData.linkedinLink, '_blank');
-  }
+  };
 
   return (
     <div className="profile-banner">
       <div className="banner-content">
         <h1 className="banner-headline" id='headline'>{bannerData.headline}</h1>
-        <p className="banner-description">
-          {bannerData.profileSummary}
-        </p>
-
+        <p className="banner-description">{bannerData.profileSummary}</p>
         <div className="banner-buttons">
-          <PlayButton onClick={handlePlayClick} label="Resume" />
-          <MoreInfoButton onClick={handleLinkedinClick} label="Linkedin" />
+          <PlayButton onClick={handlePlayClick} label="GitHub" />
+          <MoreInfoButton onClick={handleLinkedinClick} label="LinkedIn" />
         </div>
       </div>
     </div>

@@ -1,0 +1,121 @@
+.github-container {
+  padding: 100px 40px 60px;
+  background-color: #141414;
+  color: #e6e6e6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.github-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.github-main-icon {
+  font-size: 4rem;
+  color: #e6e6e6;
+  margin-bottom: 10px;
+}
+
+.github-header h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.github-profile-link {
+  color: #e50914;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.github-profile-link:hover {
+  color: #ff3340;
+}
+
+.repos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.repo-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 24px;
+  text-decoration: none;
+  color: #e6e6e6;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards ease-out;
+  animation-delay: var(--delay);
+}
+
+.repo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
+  border-color: #e50914;
+}
+
+.repo-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.repo-icon {
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.repo-card-header h3 {
+  font-size: 1.15rem;
+  color: #e50914;
+  margin: 0;
+}
+
+.repo-description {
+  font-size: 0.88rem;
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.repo-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.repo-language {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .github-container {
+    padding: 80px 20px 40px;
+  }
+}
