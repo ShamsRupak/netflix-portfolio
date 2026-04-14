@@ -3,7 +3,7 @@ import { ProfileBanner, TimelineItem, Project, Certification, ContactMe, Skill }
 export const profileBannerData: ProfileBanner = {
   backgroundImage: { url: '' },
   headline: "Shams Rupak — Software Engineer & AI/ML Engineer",
-  resumeLink: { url: "https://github.com/ShamsRupak" },
+  resumeLink: { url: "/Shams_Rupak_Master_Resume.pdf" },
   linkedinLink: "https://linkedin.com/in/shams-rupak-262906272",
   profileSummary: "M.S. Engineering Artificial Intelligence candidate at Stony Brook University. I build production-grade ML pipelines, systems-level infrastructure, and full-stack applications. From a compiled programming language in C++ to an event streaming engine in Rust — I ship real engineering.",
 };
@@ -195,6 +195,13 @@ export const skillsData: Skill[] = [
 ];
 
 export const certificationsData: Certification[] = [
+  {
+    title: 'IBM Data Fundamentals',
+    issuer: 'IBM',
+    issuedDate: '2024',
+    link: 'https://www.credly.com/badges/0afd92c2-2611-4343-baf0-8aa6b87ffc37/linked_in_profile',
+    iconName: 'ibm',
+  },
   {
     title: 'Machine Learning Fundamentals',
     issuer: 'Stony Brook University — ESE 564',

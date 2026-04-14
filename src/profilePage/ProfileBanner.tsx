@@ -21,7 +21,7 @@ const ProfileBanner: React.FC = () => {
         <h1 className="banner-headline" id='headline'>{bannerData.headline}</h1>
         <p className="banner-description">{bannerData.profileSummary}</p>
         <div className="banner-buttons">
-          <PlayButton onClick={handlePlayClick} label="GitHub" />
+          <PlayButton onClick={handlePlayClick} label="Resume" />
           <MoreInfoButton onClick={handleLinkedinClick} label="LinkedIn" />
         </div>
       </div>

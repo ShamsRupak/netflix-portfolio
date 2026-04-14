@@ -1,10 +1,11 @@
 import React from 'react';
 import './Certifications.css';
-import { FaExternalLinkAlt, FaUniversity } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaUniversity, FaDatabase } from 'react-icons/fa';
 import { certificationsData } from '../data';
 
 const iconData: { [key: string]: React.JSX.Element } = {
   'university': <FaUniversity />,
+  'ibm': <FaDatabase />,
 };
 
 const Certifications: React.FC = () => {
